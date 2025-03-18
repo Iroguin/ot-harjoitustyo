@@ -1,0 +1,104 @@
+eddie@Mac ot_viikko1 % git log --stat | cat
+commit 87040e74323916263f3a7bfe4d58cb3af9a8a977
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 21:21:03 2025 +0200
+
+    file22
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit b3373404058baee66d706b2523142519bad20139
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 21:17:44 2025 +0200
+
+    tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 961913d01c0a540ce93c83dce26bc5562e38b0b2
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 21:12:31 2025 +0200
+
+    lisäyksiä ja poistoja
+
+ eka.txt    | 4 +---
+ kolmas.txt | 2 ++
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit 6476e09b3c43f1c17cfb00330cb9542443b031e3
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 21:04:34 2025 +0200
+
+    rename
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f8d5853a974ca856a6cd26bdfe392d4d210c168
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 21:02:29 2025 +0200
+
+    poistettu toinen
+
+ toinen.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b8abdd0c63c23ecd194c161afcaae9750c847a1a
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 20:58:02 2025 +0200
+
+    poistettu tekstiä tiedostosta
+
+ tiedosto.txt | 52 +---------------------------------------------------
+ 1 file changed, 1 insertion(+), 51 deletions(-)
+
+commit c5023bc3d1f92049a37dd3bd2d1037f6268fe6f8
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 20:57:14 2025 +0200
+
+    lisätty tekstiä tiedostoon
+
+ tiedosto.txt | 99 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 99 insertions(+)
+
+commit 4afce6f3aae746f1d3a31b5af65165e71181c388
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 19:06:42 2025 +0200
+
+    stuff lisätty
+
+ stuff/stuff-file.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit e48ed17545f58e8e3442b1ded50c43d7a8c9f934
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 19:02:58 2025 +0200
+
+    lisätty kolmas
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 733084e7f353567dc2564ee6c9abcc4faf8f5487
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 18:58:46 2025 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit bbba38542e92a03d3fde96610399aacd76db511a
+Author: iroguin <143116756+Iroguin@users.noreply.github.com>
+Date:   Tue Mar 18 18:54:02 2025 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
