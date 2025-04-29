@@ -23,7 +23,8 @@ STATE_LEADERBOARD = 4
 class Button:
     """A clickable button for the UI."""
 
-    def __init__(self, x, y, width, height, text, color=LIGHT_GRAY, hover_color=WHITE, text_color=BLACK):
+    def __init__(self, x, y, width, height, text, 
+                 color=LIGHT_GRAY, hover_color=WHITE, text_color=BLACK):
         self.rect = pygame.Rect(x, y, width, height)
         self.text = text
         self.color = color
@@ -168,7 +169,7 @@ class GameUI:
         pass
 
     def update(self, mouse_pos, mouse_clicked, keys_pressed):
-        
+
         action = None
 
         if self.state == STATE_GAME and keys_pressed[pygame.K_ESCAPE]:

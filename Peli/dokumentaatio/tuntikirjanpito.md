@@ -1,15 +1,19 @@
-# Tuntikirjanpito
-tämä kirjanpito on tehty hieman jälkeenpäin viikon 5 lopussa joten en muista kaikkia tietoja. huomasin just että kirjoitin tämä suomeksi muutan sen englanniksi myöhemmin pitääkseen yhden kielen kaikkialla.
+# Time Usage
 
-## viiko 4
-| päivä | aika | mitä tein  |
+## week 4
+| day | time | activity  |
 | :----:|:-----| :-----|
-| 8.4.  | ~5    | paljon asioita |
-| yht   | ~5    | | 
+| 8.4.  | ~5    | lots of stuff |
+| total   | ~5    | | 
 
-## viiko 5
-| päivä | aika | mitä tein  |
+## week 5
+| day | time | activity  |
 | :----:|:-----| :-----|
-| 14.4.  | ~6    | bullets/ampuminen, aloitin UI samalla kun muutin maingame fileä toimimaan sen kanssa koska en tehny siitä laajennettavaa |
-| 15.4.  | ~4    | kaksi.5 menua pause ja main menu sekä skoren alottaminen, myös filejen refaktorointi  |
+| 14.4.  | ~6    | bullets, started UI, changed maingame file to work with UI |
+| 15.4.  | ~4    | added main menu, score menu and some other minor UI, refactored some code  |
 | yht    | ~10    | | 
+
+## week 6
+| day | time | activity  |
+| :----:|:-----| :-----|
+| 29.4.  | ~4    | update this later |

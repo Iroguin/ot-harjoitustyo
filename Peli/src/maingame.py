@@ -4,7 +4,7 @@ import math
 import pygame
 from asteroid import Asteroid
 from bullet import Bullet
-from game_ui import GameUI, STATE_GAME, STATE_PAUSED, STATE_MAIN_MENU
+from game_ui import GameUI, STATE_GAME, STATE_PAUSED
 
 pygame.init()
 
@@ -79,8 +79,8 @@ def reset_game():
 
 def main():
     """Main game loop."""
-    global SHIP_X, SHIP_Y, SHIP_ANGLE, ASTEROID_SPAWN_TIMER, ASTEROID_SPAWN_INTERVAL, ASTEROIDS, BULLETS
-    global SHIP_VELOCITY_X, SHIP_VELOCITY_Y, BULLET_TIMER, SCORE, SHIP_HEALTH
+    global SHIP_X, SHIP_Y, SHIP_ANGLE, SHIP_HEALTH, SHIP_VELOCITY_X, SHIP_VELOCITY_Y
+    global ASTEROID_SPAWN_TIMER, ASTEROID_SPAWN_INTERVAL, ASTEROIDS, BULLET_TIMER, SCORE, BULLETS
     clock = pygame.time.Clock()
     ui = GameUI(WIDTH, HEIGHT)
     game_state = ui.state

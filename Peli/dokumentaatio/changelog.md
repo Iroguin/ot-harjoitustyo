@@ -13,4 +13,5 @@ week 5
     - added lots of documentation stuff but didnt have much time to flesh them out
 
 week 6
-    -
+    - added documanentation
+    - added some tests
