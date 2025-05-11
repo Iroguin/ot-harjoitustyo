@@ -1,67 +1,66 @@
-"""Module for asteroid objects in the game."""
+"""Asteroid class for the game."""
 import math
 import random
 import pygame
 
 
 class Asteroid:
-    """Class representing asteroid."""
+    """Class representing an asteroid in the game."""
 
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.bounds = (width, height)
         self.size = random.randint(15, 40)
-        self.spawn_side = random.choice(['top', 'right', 'bottom', 'left'])
+        self.x, self.y = self._spawn_position()
+        self.velocity_x, self.velocity_y = self._init_velocity()
+        self.points = self._generate_points()
+        self.color = (180, 180, 180)
 
-        if self.spawn_side == 'top':
-            self.x = random.randint(0, width)
-            self.y = -self.size
-        elif self.spawn_side == 'right':
-            self.x = width + self.size
-            self.y = random.randint(0, height)
-        elif self.spawn_side == 'bottom':
-            self.x = random.randint(0, width)
-            self.y = height + self.size
-        else:  # left
-            self.x = -self.size
-            self.y = random.randint(0, height)
+    def _spawn_position(self):
+        width, height = self.bounds
+        side = random.choice(['top', 'right', 'bottom', 'left'])
+        if side == 'top':
+            return random.randint(0, width), -self.size
+        if side == 'right':
+            return width + self.size, random.randint(0, height)
+        if side == 'bottom':
+            return random.randint(0, width), height + self.size
+        # left
+        return -self.size, random.randint(0, height)
 
-        self.speed = random.uniform(1, 3)
+    def _init_velocity(self):
+        angle = random.uniform(0, 2 * math.pi)
+        speed = random.uniform(1, 3)
+        return math.cos(angle) * speed, math.sin(angle) * speed
 
-        self.angle = random.uniform(0, 2 * math.pi)
-        self.velocity_x = math.cos(self.angle) * self.speed
-        self.velocity_y = math.sin(self.angle) * self.speed
-
-        self.points = []
+    def _generate_points(self):
         num_points = random.randint(6, 10)
+        points = []
         for i in range(num_points):
             angle = 2 * math.pi * i / num_points
             distance = random.uniform(0.8, 1.2) * self.size
-            point_x = self.x + math.cos(angle) * distance
-            point_y = self.y + math.sin(angle) * distance
-            self.points.append((point_x, point_y))
-        self.color = (180, 180, 180)
+            px = self.x + math.cos(angle) * distance
+            py = self.y + math.sin(angle) * distance
+            points.append((px, py))
+        return points
 
     def update(self):
+        bx, by = self.bounds
         self.x += self.velocity_x
         self.y += self.velocity_y
+        self.points = [(px + self.velocity_x, py + self.velocity_y)
+                       for px, py in self.points]
 
-        for i, point in enumerate(self.points):
-            self.points[i] = (point[0] + self.velocity_x,
-                              point[1] + self.velocity_y)
-
-        if (self.x + self.size < 0 or
-            self.x - self.size > self.width or
-            self.y + self.size < 0 or
-                self.y - self.size > self.height):
-            return False
-        return True
+        off_left = self.x + self.size < 0
+        off_right = self.x - self.size > bx
+        off_top = self.y + self.size < 0
+        off_bottom = self.y - self.size > by
+        return not (off_left or off_right or off_top or off_bottom)
 
     def draw(self, screen):
         pygame.draw.polygon(screen, self.color, self.points)
 
     def get_position(self):
-        return (self.x, self.y)
+        return self.x, self.y
 
     def get_size(self):
         return self.size

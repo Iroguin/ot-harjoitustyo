@@ -15,3 +15,6 @@ week 5
 week 6
     - added documanentation
     - added some tests
+
+week 7
+    -

@@ -6,8 +6,6 @@ from asteroid import Asteroid
 from bullet import Bullet
 from game_ui import GameUI, STATE_GAME, STATE_PAUSED
 
-pygame.init()
-
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Simple Spaceship Game")
@@ -102,9 +100,7 @@ def main():
 
         if action == 'quit':
             running = False
-        elif action == 'start' or action == 'restart':
-            reset_game()
-        elif action == 'main_menu':
+        elif action in ('start', 'restart', 'main_menu'):
             reset_game()
 
         if game_state == STATE_GAME:
@@ -144,8 +140,9 @@ def main():
                                             ) * SHIP_THRUST / 2
 
             if (keys[pygame.K_SPACE] or mouse_clicked) and BULLET_TIMER == 0:
+                position = (SHIP_X, SHIP_Y)
                 BULLETS.append(
-                    Bullet(SHIP_X, SHIP_Y, SHIP_ANGLE, WIDTH, HEIGHT))
+                    Bullet(position, SHIP_ANGLE, (WIDTH, HEIGHT)))
                 BULLET_TIMER = BULLET_COOLDOWN
 
             SHIP_VELOCITY_X *= SHIP_FRICTION
@@ -209,7 +206,7 @@ def main():
                 ui.game_over()
         screen.fill(BLACK)
 
-        if game_state == STATE_GAME or game_state == STATE_PAUSED:
+        if game_state in (STATE_GAME, STATE_PAUSED):
             for bullet in BULLETS:
                 bullet.draw(screen)
 
