@@ -17,4 +17,5 @@ week 6
     - added some tests
 
 week 7
-    -
+    - added highscores listing
+    - fixed ui

@@ -22,5 +22,4 @@
 | day | time | activity  |
 | :----:|:-----| :-----|
 | 10.5. | ~2 | linting |
-| 11.5 | ~8 | refactoring, adding some new tests as well as adding to old ones, 
-features, finally added scoring, added vaatimustenmäärittely |
+| 11.5 | ~8 | refactoring, adding some new tests as well as adding to old ones, features, finally added scoring, added vaatimustenmäärittely |
