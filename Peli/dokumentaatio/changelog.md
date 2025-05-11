@@ -19,3 +19,5 @@ week 6
 week 7
     - added highscores listing
     - fixed ui
+    - fixed health bug
+    - removed unnesessary files

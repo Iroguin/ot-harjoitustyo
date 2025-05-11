@@ -34,6 +34,9 @@ The game's user interface consists of the following views:
     - Score displayed at the top
     - Remaining life visible
 
+### High Scores
+    - Top 10 High scores
+
 ### End Game Screen
     - Player's score
     - Best score (high score)
